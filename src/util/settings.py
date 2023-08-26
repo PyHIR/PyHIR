@@ -5,3 +5,4 @@ import os
 log_level = os.environ.get('LOG_LEVEL', 'info')
 docs_prepend_url = os.environ.get("DOCS_PREPEND_URL", "")
 deploy_url = os.environ.get("DEPLOY_URL", 'http://localhost/')
+db_url = os.environ['DB_URL'].replace('postgresql', 'postgresql+psycopg')

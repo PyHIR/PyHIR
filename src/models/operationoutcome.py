@@ -12,6 +12,7 @@ def make_operation_outcome(code: str, diagnostics: str, severity: str = 'error')
     Returns an OperationOutcome for a given code, diagnostics string, and a severity
     (Default of error)
     '''
+
     oo_template = {
         'issue': [
             {
@@ -21,4 +22,5 @@ def make_operation_outcome(code: str, diagnostics: str, severity: str = 'error')
             }
         ]
     }
+
     return OperationOutcome(**oo_template).dict() # type: ignore
